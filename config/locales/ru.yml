@@ -1,0 +1,9 @@
+ru:
+  hello: "Hello world"
+  errors:
+    attributes:
+      username:
+        invalid: Используйте только латинские буквы, цифры и _
+        too_long: Максимум 40 символов
+      text:
+        too_long: Максимум 255 символов

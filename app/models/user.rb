@@ -13,8 +13,7 @@ class User < ApplicationRecord
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
   validates :username, length: { maximum: 40 },
-            format: { with: VALID_USERNAME_REGEX,
-            message: "Use only letters, numbers and _"}
+            format: { with: VALID_USERNAME_REGEX }
   validates :email, format: { with: VALID_EMAIL_REGEX }
 
   validates :password, presence: true, on: :create

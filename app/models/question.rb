@@ -1,7 +1,7 @@
 class Question < ApplicationRecord
   belongs_to :user
   validates :text, :user, presence: true
-  validates :text, length: { maximum: 255, message: "Maximum 255 symbols" }
+  validates :text, length: { maximum: 255 }
 
   # before_validation :before_validation
   # after_validation :after_validation

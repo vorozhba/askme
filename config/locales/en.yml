@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  errors:
+    attributes:
+      username:
+        invalid: Use only letters, numbers and _
+        too_long: Maximum 40 symbols
+      text:
+        too_long: Maximum 255 symbols
