@@ -13,7 +13,7 @@ class Question < ApplicationRecord
   # after_create :after_create
 
   # before_update :before_update
-  #after_update :after_update
+  # after_update :after_update
 
   # before_destroy :before_destroy
   # after_destroy :after_destroy
