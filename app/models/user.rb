@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   validates_confirmation_of :password
 
-  before_validation :username_downcase
+  before_save :username_downcase
   before_save :encrypt_password
 
   def username_downcase
