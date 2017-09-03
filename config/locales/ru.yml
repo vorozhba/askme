@@ -7,3 +7,12 @@ ru:
         too_long: Максимум 40 символов
       text:
         too_long: Максимум 255 символов
+
+  users:
+    show:
+      count:
+        zero: "Всего: %{count} вопросов"
+        one: "Всего: %{count} вопрос"
+        few: "Всего: %{count} вопроса"
+        many: "Всего: %{count} вопросов"
+        other: "Всего: %{count} вопроса"

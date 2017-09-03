@@ -17,6 +17,10 @@
     @<%= @user.username %>
   </h2>
 
+  <div class="user-questions-quantity">
+    <%= t('.count', count: @questions.length) %>
+  </div>
+
   <div class="user-ask-button container text-center">
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>

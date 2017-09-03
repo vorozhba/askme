@@ -38,3 +38,11 @@ en:
         too_long: Maximum 40 symbols
       text:
         too_long: Maximum 255 symbols
+
+  users:
+    show:
+      count:
+        zero: "Total: %{count} questions"
+        one: "Total: %{count} question"
+        other: "Total: %{count} questions"
+
