@@ -19,7 +19,7 @@ ru:
       count_answers:
         zero: "ответов"
         one: "ответ"
-        few: "ответов"
+        few: "ответа"
         many: "ответов"
         other: "ответа"
       count_unanswered:
