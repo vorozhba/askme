@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 
     # Пытаемся сохранить пользователя.
     if @user.save
+      session[:user_id] = @user.id
       # Если удалось, отправляем пользователя на главную с сообщение, что
       # пользователь создан.
       redirect_to root_url, notice: 'Пользователь успешно зарегестрирован!'
