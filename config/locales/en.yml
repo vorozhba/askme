@@ -42,7 +42,17 @@ en:
   users:
     show:
       count:
-        zero: "Total: %{count} questions"
-        one: "Total: %{count} question"
-        other: "Total: %{count} questions"
-
+        zero: "questions"
+        one: "question"
+        many: "questions"
+        other: "questions"
+      count_answers:
+        zero: "answers"
+        one: "answer"
+        many: "answers"
+        other: "answers"
+      count_unanswered:
+        zero: "unanswered"
+        one: "unanswered"
+        many: "unanswered"
+        other: "unanswered"
