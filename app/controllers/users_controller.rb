@@ -98,6 +98,11 @@ class UsersController < ApplicationController
     @unanswered_count = @questions_count - @answers_count
   end
 
+  def destroy
+    @user.destroy
+    redirect_to root_url, notice: 'Ваш аккаунт успешно удален!'
+  end
+
   private
 
   # Если загруженный из базы юзер и текущий залогиненный не совпадают — посылаем

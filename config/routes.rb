@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   # Ресурс пользователей (экшен destroy не поддерживается)
-  resources :users, except: [:destroy]
+  resources :users
 
   # Ресурс вопросов (кроме экшенов :show, :new, :index)
   resources :questions, except: [:show, :new, :index]
