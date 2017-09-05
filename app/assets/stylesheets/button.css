@@ -9,6 +9,13 @@
   border: none;
 }
 
+.button-delete {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
 .button-dark {
   background: #2e2f41;
   color: #fff;
@@ -20,9 +27,7 @@
 }
 
 .button-red {
-    background: #cc0000;
-    color: #fff;
-    float: right;
+    color: darkred;
 }
 
 .button-light {

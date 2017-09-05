@@ -1,4 +1,12 @@
 <%# Страница редактирования пользователя %>
+<div class="button-delete">
+  <span title="Удалить аккаунт">
+    <%= link_to fa_icon('trash'), user_path(@user), method: :delete,
+                data: {confirm: 'Вы точно хотите удалить аккаунт?'},
+                class: 'button-red fa-lg'%>
+  </span>
+</div>
+
 <div class="container content-wrapper buffer-both">
   <h1 class="title-medium">Править профиль</h1>
 
@@ -59,11 +67,6 @@
 
         <div class="form-action buffer-top">
           <%= f.submit 'Сохранить', class: 'button button-dark button-small' %>
-        </div>
-
-        <div class="form-action buffer-top">
-          <%= link_to 'Удалить аккаунт', user_path(@user), method: :delete, data: {confirm: 'Вы точно хотите удалить аккаунт?'},
-                      class: 'button button-red button-small' %>
         </div>
     <% end %>
 
