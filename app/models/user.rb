@@ -8,8 +8,9 @@ class User < ApplicationRecord
   VALID_CSS_COLOR_REGEX = /\#([a-f0-9]{6}|[a-f0-9]{3})$\Z/i
 
   attr_accessor :password
-
-  has_many :questions
+  # связь один-ко-многим; удаляем вопросы, заданные пользователю, при удалении пользователя
+  # http://rusrails.ru/active-record-associations#dependent3
+  has_many :questions, dependent: :destroy
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true
