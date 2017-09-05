@@ -5,6 +5,7 @@ class User < ApplicationRecord
   DIGEST = OpenSSL::Digest::SHA256.new
   VALID_USERNAME_REGEX = /\A[a-zA-Z0-9_\-]+\z/
   VALID_EMAIL_REGEX = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\Z/i
+  VALID_CSS_COLOR_REGEX = /\#([a-f0-9]{6}|[a-f0-9]{3})$\Z/i
 
   attr_accessor :password
 
@@ -15,6 +16,7 @@ class User < ApplicationRecord
   validates :username, length: { maximum: 40 },
             format: { with: VALID_USERNAME_REGEX }
   validates :email, format: { with: VALID_EMAIL_REGEX }
+  validates :color, format: { with: VALID_CSS_COLOR_REGEX }
 
   validates :password, presence: true, on: :create
 

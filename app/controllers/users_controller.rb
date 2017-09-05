@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 
     # Пытаемся сохранить пользователя.
     if @user.save
+      session[:user_id] = @user.id
       # Если удалось, отправляем пользователя на главную с сообщение, что
       # пользователь создан.
       redirect_to root_url, notice: 'Пользователь успешно зарегестрирован!'
@@ -91,6 +92,15 @@ class UsersController < ApplicationController
     # создаем болванку вопроса, вызывая метод build у результата вызова метода
     # @user.questions.
     @new_question = @user.questions.build
+
+    @questions_count = @questions.count
+    @answers_count = @questions.where.not(answer: nil).count
+    @unanswered_count = @questions_count - @answers_count
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to root_url, notice: 'Ваш аккаунт успешно удален!'
   end
 
   private
@@ -113,6 +123,6 @@ class UsersController < ApplicationController
   # :avatar_url. Другие ключи будут отброшены.
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation,
-                                 :name, :username, :avatar_url)
+                                 :name, :username, :avatar_url, :color)
   end
 end

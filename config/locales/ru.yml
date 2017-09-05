@@ -11,8 +11,20 @@ ru:
   users:
     show:
       count:
-        zero: "Всего: %{count} вопросов"
-        one: "Всего: %{count} вопрос"
-        few: "Всего: %{count} вопроса"
-        many: "Всего: %{count} вопросов"
-        other: "Всего: %{count} вопроса"
+        zero: "вопросов"
+        one: "вопрос"
+        few: "вопроса"
+        many: "вопросов"
+        other: "вопроса"
+      count_answers:
+        zero: "ответов"
+        one: "ответ"
+        few: "ответа"
+        many: "ответов"
+        other: "ответа"
+      count_unanswered:
+        zero: "безответных"
+        one: "безответный"
+        few: "безответных"
+        many: "безответных"
+        other: "безответных"
