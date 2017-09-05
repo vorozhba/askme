@@ -22,9 +22,15 @@
     </div>
 
     <%# Username автора вопроса %>
-    <% if question.author.present? %>
+    <% if question.author.present? && question.author != current_user %>
         <div class="question-author">
           <%= link_to "@#{question.author.username}", user_path(question.author) %>
+        </div>
+    <% end %>
+
+    <% if question.author.present? && question.author == current_user %>
+        <div class="question-author">
+          <%= "@#{question.author.username}" %>
         </div>
     <% end %>
   </div>
