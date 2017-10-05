@@ -1,24 +1,10 @@
-# ASKME
+# Учебное веб-приложение "Askme"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Версия Rails: 5.1.3
 
-Things you may want to cover:
+### Запуск в режиме development:
+    bundle exec rails db:migrate
+    bundle exec rails s
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Веб-сайт приложения:
+  [askme-300](https://askme-300.herokuapp.com/)
